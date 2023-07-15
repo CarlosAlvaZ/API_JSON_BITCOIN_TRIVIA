@@ -20,5 +20,14 @@ export const QuestionController = {
             status : 200,
             data : check
         })
+    },
+    getRandom : async (req, res) => {
+        let { size } = req.params
+        size = parseInt(size)
+        const result = await QuestionService.getRandom(size)
+        return res.status(200).json({
+            status : 200,
+            data : result
+        })
     }
 }

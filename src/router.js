@@ -12,5 +12,9 @@ router.get('/getStatus/:id', GameController.getStatus)
 // Rutas Question
 router.get('/getQuestion/:id', QuestionController.getOne)
 router.get('/checkAnswer/', QuestionController.checkAnswer)
+router.get('/random/:size', QuestionController.getRandom)
+
+// Rutas LNURL
+router.get('/createLnurl', GameController.createLnurl)
 
 export default router

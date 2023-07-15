@@ -1,6 +1,9 @@
 import mongoose, {Schema, model} from "mongoose";
 
 const InvoiceSchema = new Schema({
+    bolt : {
+        type : String
+    },
     hash : {
         type : String
     },

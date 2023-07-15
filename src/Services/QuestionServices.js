@@ -14,5 +14,12 @@ export const QuestionService = {
         } catch (error) {
             return error
         }
+    },
+    getRandom : size => {
+        try {
+            return Question.aggregate( [ { $sample : { size : size } } ] )
+        } catch (error) {
+            return error
+        }
     }
 }
